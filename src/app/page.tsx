@@ -43,12 +43,15 @@ export default function HomePage() {
             building excellent software that improves the lives of those around
             me.
           </p>
-          <Button className="bg-white border border-[#9810FA] hover:border-[#9810FA] hover:bg-[#9810FA] text-gray-800 hover:text-white rounded-full px-8 py-6 h-auto group transition-colors duration-300">
+          {/* <Button className="bg-white border border-[#9810FA] hover:border-[#9810FA] hover:bg-[#9810FA] text-gray-800 hover:text-white rounded-full px-8 py-6 h-auto group transition-colors duration-300">
             <span>MORE ABOUT ME</span>
             <span className="ml-2 w-8 h-8 rounded-full bg-[#9810FA] text-white flex items-center justify-center group-hover:bg-transparent">
               <ArrowRight className="h-4 w-4 font-extrabold" />
             </span>
-          </Button>
+          </Button> */}
+          <div className="flex items-center justify-center mb-15">
+            <CustomeButton icon={<TiArrowRightThick />} text="MORE ABOUT ME" />
+          </div>
         </div>
 
         <div className="absolute top-6 right-6">
@@ -196,12 +199,6 @@ export default function HomePage() {
               building excellent software that improves the lives of those
               around me.
             </p>
-            {/* <Button className="bg-white border-2 border-[#6957AF] hover:border-[#6957AF] hover:bg-[#6957AF] text-gray-800 hover:text-white rounded-full px-8 py-3 h-auto group transition-colors duration-300">
-              <span className="font-bold text-xl">MORE ABOUT ME</span>
-              <span className="ml-2 w-8 h-8 rounded-full bg-[#6957AF] text-white flex items-center justify-center group-hover:bg-transparent">
-                <TiArrowRightThick  />
-              </span>
-            </Button> */}
             <CustomeButton icon={<TiArrowRightThick />} text="MORE ABOUT ME" />
           </div>
         </div>
