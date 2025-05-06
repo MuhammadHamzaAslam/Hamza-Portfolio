@@ -2,7 +2,6 @@
 
 import type React from "react";
 
-import { useTheme } from "next-themes";
 import PersonalInfo from "./personal-info";
 import StatBoxes from "./stat-boxes";
 import SkillsCarousel from "./skills-carousel";
@@ -15,7 +14,6 @@ const AboutScreen = ({
 }: {
   onTabClick?: (screen: string, e: React.MouseEvent) => void;
 }) => {
-  const { theme } = useTheme();
 
   return (
     <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white overflow-x-hidden">
@@ -60,7 +58,7 @@ const AboutScreen = ({
 
         {/* Skills Section */}
         <div className="mb-16">
-          <h2 className="text-2xl font-bold mb-12 text-center text-black dark:text-white">
+          <h2 className="text-4xl font-bold mb-12 text-center text-black dark:text-white">
             MY SKILLS
           </h2>
           <SkillsCarousel />

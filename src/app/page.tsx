@@ -17,17 +17,13 @@ import {
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
 import AboutScreen from "@/components/about-screen";
-import { TiArrowRightThick } from "react-icons/ti";
-import CustomeButton from "@/components/customeButton";
 import me from "../../public/images/me.jpg";
-import { useTheme } from "next-themes";
 
 export default function HomePage() {
   const [activeScreen, setActiveScreen] = useState("home");
   const [animationOrigin, setAnimationOrigin] = useState({ x: 0, y: 0 });
   const [isAnimating, setIsAnimating] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
-  const theme = useTheme();
 
   const handleTabClick = (screen: string, e: React.MouseEvent) => {
     if (isAnimating) return;
@@ -98,7 +94,7 @@ export default function HomePage() {
 
               <div className="text-center max-w-md mx-auto">
                 <h1 className="text-3xl md:text-4xl font-bold text-[#6957AF] mb-2">
-                  I&apos;MUHAMMAD HAMZA.
+                  I&apos;M MUHAMMAD HAMZA.
                 </h1>
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-700 dark:text-gray-300 mb-6">
                   WEB & MOBILE APP DEVELOPER
@@ -262,7 +258,7 @@ export default function HomePage() {
                   <div className="flex items-center gap-4 mb-4">
                     <div className="w-12 h-1 bg-[#6957AF] dark:bg-purple-500"></div>
                     <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#6957AF] dark:text-purple-400">
-                      I&apos;MUHAMMAD HAMZA.
+                      I&apos;M MUHAMMAD HAMZA.
                     </h1>
                   </div>
                   <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#666666] dark:text-white mb-6">
@@ -274,11 +270,6 @@ export default function HomePage() {
                     passionate about building excellent software that improves
                     the lives of those around me.
                   </p>
-                  {/* <CustomeButton
-                    icon={<TiArrowRightThick />}
-                    text="MORE ABOUT ME"
-                    onClick={(e: any) => handleTabClick("about", e)}
-                  /> */}
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
