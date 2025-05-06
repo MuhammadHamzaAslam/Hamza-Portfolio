@@ -10,8 +10,8 @@ const PersonalInfo = () => {
   // Personal info data
   const infoItems = [
     { label: "First Name", value: "Muhammad" },
-    { label: "Address", value: "F.B Area" },
     { label: "Last Name", value: "Hamza" },
+    { label: "Address", value: "F.B Area" },
     { label: "Phone", value: "+92 3172772879" },
     { label: "Age", value: "15 Years" },
     { label: "Email", value: "hamzaaslam19087" },
