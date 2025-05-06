@@ -12,18 +12,22 @@ import {
   Mail,
   MessageSquare,
   Settings,
+  Download,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
 import AboutScreen from "@/components/about-screen";
 import { TiArrowRightThick } from "react-icons/ti";
 import CustomeButton from "@/components/customeButton";
+import me from "../../public/images/me.jpg";
+import { useTheme } from "next-themes";
 
 export default function HomePage() {
   const [activeScreen, setActiveScreen] = useState("home");
   const [animationOrigin, setAnimationOrigin] = useState({ x: 0, y: 0 });
   const [isAnimating, setIsAnimating] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
+  const theme = useTheme();
 
   const handleTabClick = (screen: string, e: React.MouseEvent) => {
     if (isAnimating) return;
@@ -83,7 +87,7 @@ export default function HomePage() {
               <div className="relative w-48 h-48 md:w-64 md:h-64 mb-8">
                 <div className="absolute inset-0 rounded-full overflow-hidden border-4 border-[#6957AF]">
                   <Image
-                    src="/profile-image.jpg"
+                    src={me}
                     alt="Profile"
                     fill
                     className="object-cover"
@@ -106,11 +110,21 @@ export default function HomePage() {
                   lives of those around me.
                 </p>
                 <div className="flex items-center justify-center mb-15">
-                  <CustomeButton
-                    icon={<TiArrowRightThick />}
-                    text="MORE ABOUT ME"
-                    onClick={(e: any) => handleTabClick("about", e)}
-                  />
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.7 }}
+                    className="mt-10"
+                  >
+                    <button className="button type1 flex items-center rounded-full overflow-hidden bg-transparent border border-[#6957AF] hover:bg-[#6957AF] transition-all duration-300 group">
+                      <span className={`font-semibold text-sm px-6 py-3`}>
+                        More About Me
+                      </span>
+                      <div className="w-12 h-12 rounded-full bg-[#6957AF] flex items-center justify-center text-white">
+                        <Download className="h-5 w-5" />
+                      </div>
+                    </button>
+                  </motion.div>
                 </div>
               </div>
 
@@ -137,7 +151,7 @@ export default function HomePage() {
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="relative w-[80%] max-w-[500px] rounded-[2rem] overflow-hidden shadow-2xl">
                     <Image
-                      src="/profile-image.jpg"
+                      src={me}
                       alt="Profile"
                       width={500}
                       height={600}
@@ -260,11 +274,26 @@ export default function HomePage() {
                     passionate about building excellent software that improves
                     the lives of those around me.
                   </p>
-                  <CustomeButton
+                  {/* <CustomeButton
                     icon={<TiArrowRightThick />}
                     text="MORE ABOUT ME"
                     onClick={(e: any) => handleTabClick("about", e)}
-                  />
+                  /> */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.7 }}
+                    className="mt-10"
+                  >
+                    <button className="button type1 flex items-center rounded-full overflow-hidden bg-transparent border border-[#6957AF] hover:bg-[#6957AF] transition-all duration-300 group">
+                      <span className={`font-semibold text-sm px-6 py-3`}>
+                        More About Me
+                      </span>
+                      <div className="w-12 h-12 rounded-full bg-[#6957AF] flex items-center justify-center text-white">
+                        <Download className="h-5 w-5" />
+                      </div>
+                    </button>
+                  </motion.div>
                 </div>
               </div>
             </div>

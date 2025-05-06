@@ -9,16 +9,15 @@ const PersonalInfo = () => {
 
   // Personal info data
   const infoItems = [
-    { label: "First Name", value: "Steve" },
-    { label: "Address", value: "Tunis" },
-    { label: "Last Name", value: "Milner" },
-    { label: "Phone", value: "+216 21 184 010" },
-    { label: "Age", value: "27 Years" },
-    { label: "Email", value: "demo@demo.com" },
-    { label: "Nationality", value: "Tunisian" },
-    { label: "Skype", value: "steve.milner" },
+    { label: "First Name", value: "Muhammad" },
+    { label: "Address", value: "F.B Area" },
+    { label: "Last Name", value: "Hamza" },
+    { label: "Phone", value: "+92 3172772879" },
+    { label: "Age", value: "15 Years" },
+    { label: "Email", value: "hamzaaslam19087" },
+    { label: "Nationality", value: "Pakistani" },
     { label: "Freelance", value: "Available" },
-    { label: "Languages", value: "French, English" },
+    { label: "Languages", value: "Urdu, English" },
   ];
 
   return (
@@ -50,7 +49,7 @@ const PersonalInfo = () => {
               {item.label} :{" "}
             </span>
             <span
-              className={`font-medium ${
+              className={`font-bold ${
                 theme === "dark" ? "text-white" : "text-black"
               }`}
             >
@@ -66,7 +65,7 @@ const PersonalInfo = () => {
         transition={{ duration: 0.5, delay: 0.7 }}
         className="mt-10"
       >
-        <button className="flex items-center rounded-full overflow-hidden bg-transparent border border-[#6957AF] transition-all duration-300 group">
+        <button className="button type-1 flex items-center rounded-full overflow-hidden  hover:bg-[#6957AF] border border-[#6957AF] transition-all duration-300 group">
           <span
             className={`font-medium text-sm px-6 py-3 ${
               theme === "dark" ? "text-white" : "text-black"

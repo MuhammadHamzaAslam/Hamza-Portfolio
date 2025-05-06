@@ -30,12 +30,32 @@ const skills = [
     logo: "https://cdn.worldvectorlogo.com/logos/github-icon-1.svg",
   },
   {
-    name: "React",
+    name: "React.js",
     logo: "https://cdn.worldvectorlogo.com/logos/react-2.svg",
   },
   {
     name: "Node.js",
     logo: "https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg",
+  },
+  {
+    name: "React Native",
+    logo: "https://cdn.worldvectorlogo.com/logos/react-2.svg",
+  },
+  {
+    name: "Javascrpit",
+    logo: "https://www.svgrepo.com/show/303206/javascript-logo.svg",
+  },
+  {
+    name: "Bootstrap",
+    logo: "https://www.svgrepo.com/show/353498/bootstrap.svg",
+  },
+  {
+    name: "Vercel",
+    logo: "https://www.svgrepo.com/show/354512/vercel.svg",
+  },
+  {
+    name: "MUI",
+    logo: "https://www.svgrepo.com/show/306383/material-ui.svg",
   },
 ];
 
@@ -79,7 +99,7 @@ const SkillsCarousel = () => {
             >
               <div className="w-16 h-16 mb-4 flex items-center justify-center">
                 <img
-                  src={skill.logo || "/placeholder.svg"}
+                  src={skill.logo}
                   alt={skill.name}
                   className="max-w-full max-h-full object-contain"
                   onError={(e) => {

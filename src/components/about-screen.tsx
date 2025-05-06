@@ -24,11 +24,9 @@ const AboutScreen = ({
         {/* ABOUT ME Header */}
         <div className="flex justify-center mb-16">
           <h1 className="text-6xl md:text-7xl font-extrabold relative">
-            <span className="text-[#333333] absolute -left-14 top-0">R</span>
             <span className="text-black dark:text-white">ABOUT </span>
             <span className="text-[#6957AF]">
               ME
-              <span className="text-[#333333] absolute -right-14 top-0">E</span>
             </span>
             {/* Text shadow effect */}
             <span

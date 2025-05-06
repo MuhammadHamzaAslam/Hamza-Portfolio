@@ -72,51 +72,36 @@ const TimelineItem = ({
 const ExperienceEducation = () => {
   const { theme } = useTheme();
 
-  const experienceItems = [
-    {
-      year: "2018 - PRESENT",
-      title: "WEB DEVELOPER",
-      company: "ENVATO",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit.",
-    },
-    {
-      year: "2013 - 2018",
-      title: "UI/UX DESIGNER",
-      company: "THEMEFOREST",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit.",
-    },
-    {
-      year: "2005 - 2013",
-      title: "CONSULTANT",
-      company: "VIDEOHIVE",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit.",
-    },
-  ];
+  // const experienceItems = [
+  //   {
+  //     year: "2025 - PRESENT",
+  //     title: "Matriculation",
+  //     company: "K.M.A School",
+  //     description: "Currently Doing Matriculation.",
+  //   },
+  // ];
 
   const educationItems = [
     {
-      year: "2015",
-      title: "ENGINEER DEGREE",
-      company: "OXFORD UNIVERSITY",
+      year: "2025-Present",
+      title: "Matriculation",
+      company: "K.M.A School",
       description:
-        "Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit.",
+        "Currently Doing Matriculation.",
     },
     {
-      year: "2012",
-      title: "MASTER DEGREE",
-      company: "KIEV UNIVERSITY",
+      year: "2025",
+      title: "Mern Stack Developer",
+      company: "SMIT",
       description:
-        "Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit.",
+        "Certified Mern Stack Developer from Saylani Mass It Training.",
     },
     {
-      year: "2009",
-      title: "BACHELOR DEGREE",
-      company: "TUNIS HIGH SCHOOL",
+      year: "2025",
+      title: "Javascript Essentials",
+      company: "Cisco",
       description:
-        "Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit.",
+        "Certified Javascript Essentials from Cisco.",
     },
   ];
 
@@ -126,7 +111,7 @@ const ExperienceEducation = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className={`text-2xl font-bold mb-12 text-center uppercase ${
+        className={`text-4xl font-bold mb-12 text-center uppercase ${
           theme === "dark" ? "text-white" : "text-black"
         }`}
       >
@@ -134,7 +119,7 @@ const ExperienceEducation = () => {
       </motion.h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
-        <div>
+        {/* <div>
           {experienceItems.map((item, index) => (
             <TimelineItem
               key={index}
@@ -145,7 +130,7 @@ const ExperienceEducation = () => {
               description={item.description}
             />
           ))}
-        </div>
+        </div> */}
 
         <div>
           {educationItems.map((item, index) => (

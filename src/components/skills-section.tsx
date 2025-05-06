@@ -133,7 +133,7 @@ const SkillsSection = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className={`text-2xl font-bold mb-12 text-center uppercase ${
+        className={`text-4xl font-bold mb-12 text-center uppercase ${
           theme === "dark" ? "text-white" : "text-black"
         }`}
       >

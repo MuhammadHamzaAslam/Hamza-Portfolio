@@ -178,8 +178,8 @@
 }
 
 .button {
-  height: 50px;
-  width: 250px;
+  /* height: 50px;
+  width: 250px; */
   position: relative;
   background-color: transparent;
   cursor: pointer;
