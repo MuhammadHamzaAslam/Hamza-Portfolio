@@ -17,6 +17,10 @@ import {
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
 import AboutScreen from "@/components/about-screen";
+import ContactScreen from "@/components/contact-screen";
+import { TiArrowRightThick } from "react-icons/ti";
+import CustomeButton from "@/components/customeButton";
+import { useTheme } from "next-themes";
 import me from "../../public/images/me.jpg";
 
 export default function HomePage() {
@@ -24,6 +28,8 @@ export default function HomePage() {
   const [animationOrigin, setAnimationOrigin] = useState({ x: 0, y: 0 });
   const [isAnimating, setIsAnimating] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
+
+  const { theme } = useTheme();
 
   const handleTabClick = (screen: string, e: React.MouseEvent) => {
     if (isAnimating) return;
@@ -47,7 +53,10 @@ export default function HomePage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col relative" ref={containerRef}>
+    <div
+      className="min-h-screen flex flex-col relative cursor-custom"
+      ref={containerRef}
+    >
       {/* Circular reveal animation overlay */}
       <AnimatePresence>
         {isAnimating && (
@@ -94,7 +103,7 @@ export default function HomePage() {
 
               <div className="text-center max-w-md mx-auto">
                 <h1 className="text-3xl md:text-4xl font-bold text-[#6957AF] mb-2">
-                  I&apos;M MUHAMMAD HAMZA.
+                  I&apos;MUHAMMAD HAMZA.
                 </h1>
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-700 dark:text-gray-300 mb-6">
                   WEB & MOBILE APP DEVELOPER
@@ -106,21 +115,21 @@ export default function HomePage() {
                   lives of those around me.
                 </p>
                 <div className="flex items-center justify-center mb-15">
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.7 }}
-                    className="mt-10"
+                  <button
+                    onClick={(e: any) => handleTabClick("about", e)}
+                    className="button type-1 flex items-center rounded-full overflow-hidden  hover:bg-[#6957AF] border border-[#6957AF] transition-all duration-300 group"
                   >
-                    <button className="button type1 flex items-center rounded-full overflow-hidden bg-transparent border border-[#6957AF] hover:bg-[#6957AF] transition-all duration-300 group">
-                      <span className={`font-semibold text-sm px-6 py-3`}>
-                        More About Me
-                      </span>
-                      <div className="w-12 h-12 rounded-full bg-[#6957AF] flex items-center justify-center text-white">
-                        <Download className="h-5 w-5" />
-                      </div>
-                    </button>
-                  </motion.div>
+                    <span
+                      className={`font-medium text-sm px-6 py-3 ${
+                        theme === "dark" ? "text-white" : "text-black"
+                      }`}
+                    >
+                      More About Me
+                    </span>
+                    <div className="w-12 h-12 rounded-full bg-[#6957AF] flex items-center justify-center text-white">
+                      <TiArrowRightThick className="h-5 w-5" />
+                    </div>
+                  </button>
                 </div>
               </div>
 
@@ -161,7 +170,7 @@ export default function HomePage() {
                   <Button
                     variant="ghost"
                     size="icon"
-                    className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20"
+                    className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 cursor-pointer-hover"
                   >
                     <span className="sr-only">Settings</span>
                     <Settings className="h-5 w-5" />
@@ -185,7 +194,7 @@ export default function HomePage() {
                       </span>
                     </div>
                     <div
-                      className="z-10 w-12 h-12 rounded-full bg-[#6957AF] flex items-center justify-center text-white cursor-pointer"
+                      className="z-10 w-12 h-12 rounded-full bg-[#6957AF] flex items-center justify-center text-white cursor-pointer-hover"
                       onClick={(e) => handleTabClick("home", e)}
                     >
                       <Home className="h-5 w-5" />
@@ -200,7 +209,7 @@ export default function HomePage() {
                       </span>
                     </div>
                     <div
-                      className="z-10 w-12 h-12 rounded-full bg-[#1e1e24] group-hover:bg-[#6957AF] flex items-center justify-center text-white cursor-pointer"
+                      className="z-10 w-12 h-12 rounded-full bg-[#1e1e24] group-hover:bg-[#6957AF] flex items-center justify-center text-white cursor-pointer-hover"
                       onClick={(e) => handleTabClick("about", e)}
                     >
                       <User className="h-5 w-5" />
@@ -215,7 +224,7 @@ export default function HomePage() {
                       </span>
                     </div>
                     <div
-                      className="z-10 w-12 h-12 rounded-full bg-[#1e1e24] group-hover:bg-[#6957AF] flex items-center justify-center text-white cursor-pointer"
+                      className="z-10 w-12 h-12 rounded-full bg-[#1e1e24] group-hover:bg-[#6957AF] flex items-center justify-center text-white cursor-pointer-hover"
                       onClick={(e) => handleTabClick("work", e)}
                     >
                       <Briefcase className="h-5 w-5" />
@@ -230,7 +239,7 @@ export default function HomePage() {
                       </span>
                     </div>
                     <div
-                      className="z-10 w-12 h-12 rounded-full bg-[#1e1e24] group-hover:bg-[#6957AF] flex items-center justify-center text-white cursor-pointer"
+                      className="z-10 w-12 h-12 rounded-full bg-[#1e1e24] group-hover:bg-[#6957AF] flex items-center justify-center text-white cursor-pointer-hover"
                       onClick={(e) => handleTabClick("contact", e)}
                     >
                       <Mail className="h-5 w-5" />
@@ -245,7 +254,7 @@ export default function HomePage() {
                       </span>
                     </div>
                     <div
-                      className="z-10 w-12 h-12 rounded-full bg-[#1e1e24] group-hover:bg-[#6957AF] flex items-center justify-center text-white cursor-pointer"
+                      className="z-10 w-12 h-12 rounded-full bg-[#1e1e24] group-hover:bg-[#6957AF] flex items-center justify-center text-white cursor-pointer-hover"
                       onClick={(e) => handleTabClick("chat", e)}
                     >
                       <MessageSquare className="h-5 w-5" />
@@ -258,7 +267,7 @@ export default function HomePage() {
                   <div className="flex items-center gap-4 mb-4">
                     <div className="w-12 h-1 bg-[#6957AF] dark:bg-purple-500"></div>
                     <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#6957AF] dark:text-purple-400">
-                      I&apos;M MUHAMMAD HAMZA.
+                      I&apos;MUHAMMAD HAMZA.
                     </h1>
                   </div>
                   <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#666666] dark:text-white mb-6">
@@ -270,21 +279,21 @@ export default function HomePage() {
                     passionate about building excellent software that improves
                     the lives of those around me.
                   </p>
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.7 }}
-                    className="mt-10"
+                  <button
+                    onClick={(e: any) => handleTabClick("about", e)}
+                    className="button type-1 flex items-center rounded-full overflow-hidden  hover:bg-[#6957AF] border border-[#6957AF] transition-all duration-300 group"
                   >
-                    <button className="button type1 flex items-center rounded-full overflow-hidden bg-transparent border border-[#6957AF] hover:bg-[#6957AF] transition-all duration-300 group">
-                      <span className={`font-semibold text-sm px-6 py-3`}>
-                        More About Me
-                      </span>
-                      <div className="w-12 h-12 rounded-full bg-[#6957AF] flex items-center justify-center text-white">
-                        <Download className="h-5 w-5" />
-                      </div>
-                    </button>
-                  </motion.div>
+                    <span
+                      className={`font-medium text-sm px-6 py-3 ${
+                        theme === "dark" ? "text-white" : "text-black"
+                      }`}
+                    >
+                      More About Me
+                    </span>
+                    <div className="w-12 h-12 rounded-full bg-[#6957AF] flex items-center justify-center text-white">
+                      <TiArrowRightThick className="h-5 w-5" />
+                    </div>
+                  </button>
                 </div>
               </div>
             </div>
@@ -292,31 +301,31 @@ export default function HomePage() {
             {/* Mobile navigation */}
             <div className="lg:hidden fixed bottom-0 left-0 right-0 flex justify-around items-center p-4 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 z-50">
               <div
-                className="w-12 h-12 rounded-full bg-[#6957AF] flex items-center justify-center text-white cursor-pointer"
+                className="w-12 h-12 rounded-full bg-[#6957AF] flex items-center justify-center text-white cursor-pointer-hover"
                 onClick={(e) => handleTabClick("home", e)}
               >
                 <Home className="h-5 w-5" />
               </div>
               <div
-                className="w-12 h-12 rounded-full bg-[#1e1e24] flex items-center justify-center text-white cursor-pointer"
+                className="w-12 h-12 rounded-full bg-[#1e1e24] flex items-center justify-center text-white cursor-pointer-hover"
                 onClick={(e) => handleTabClick("about", e)}
               >
                 <User className="h-5 w-5" />
               </div>
               <div
-                className="w-12 h-12 rounded-full bg-[#1e1e24] flex items-center justify-center text-white cursor-pointer"
+                className="w-12 h-12 rounded-full bg-[#1e1e24] flex items-center justify-center text-white cursor-pointer-hover"
                 onClick={(e) => handleTabClick("work", e)}
               >
                 <Briefcase className="h-5 w-5" />
               </div>
               <div
-                className="w-12 h-12 rounded-full bg-[#1e1e24] flex items-center justify-center text-white cursor-pointer"
+                className="w-12 h-12 rounded-full bg-[#1e1e24] flex items-center justify-center text-white cursor-pointer-hover"
                 onClick={(e) => handleTabClick("contact", e)}
               >
                 <Mail className="h-5 w-5" />
               </div>
               <div
-                className="w-12 h-12 rounded-full bg-[#1e1e24] flex items-center justify-center text-white cursor-pointer"
+                className="w-12 h-12 rounded-full bg-[#1e1e24] flex items-center justify-center text-white cursor-pointer-hover"
                 onClick={(e) => handleTabClick("chat", e)}
               >
                 <MessageSquare className="h-5 w-5" />
@@ -325,6 +334,8 @@ export default function HomePage() {
           </motion.div>
         ) : activeScreen === "about" ? (
           <AboutScreen key="about" onTabClick={handleTabClick} />
+        ) : activeScreen === "contact" ? (
+          <ContactScreen key="contact" onTabClick={handleTabClick} />
         ) : (
           <motion.div
             key="placeholder"
@@ -339,7 +350,7 @@ export default function HomePage() {
               </h2>
               <p className="mb-6">This page is under construction</p>
               <Button
-                className="bg-[#6957AF] hover:bg-[#5a4a9e] text-white"
+                className="bg-[#6957AF] hover:bg-[#5a4a9e] text-white cursor-pointer-hover"
                 onClick={(e) => handleTabClick("home", e)}
               >
                 Back to Home
