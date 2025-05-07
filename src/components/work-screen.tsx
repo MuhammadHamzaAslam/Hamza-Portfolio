@@ -30,6 +30,7 @@ interface WorkScreenProps {
 
 const WorkScreen = ({ onTabClick }: WorkScreenProps) => {
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
+  console.log(hoveredProject);
 
   // Project data
   const projects: Project[] = [
