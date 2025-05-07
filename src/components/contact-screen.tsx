@@ -13,6 +13,7 @@ import {
   MessageSquare,
   Send,
   Download,
+  BookOpen,
 } from "lucide-react";
 import {
   FaFacebookF,
@@ -402,14 +403,14 @@ const ContactScreen = ({ onTabClick }: ContactScreenProps) => {
         <div className="group relative flex items-center justify-end">
           <div className="absolute right-0 h-12 overflow-hidden flex items-center transition-all duration-300 rounded-full bg-[#6957AF] text-white opacity-0 group-hover:opacity-100 group-hover:w-32">
             <span className="pl-4 pr-16 font-medium whitespace-nowrap">
-              CHAT
+              BLOGS
             </span>
           </div>
           <div
             className="z-10 w-12 h-12 rounded-full bg-[#1e1e24] group-hover:bg-[#6957AF] flex items-center justify-center text-white cursor-pointer-hover"
             onClick={(e) => onTabClick && onTabClick("chat", e)}
           >
-            <MessageSquare className="h-5 w-5" />
+            <BookOpen className="h-5 w-5" />
           </div>
         </div>
       </div>
@@ -441,7 +442,7 @@ const ContactScreen = ({ onTabClick }: ContactScreenProps) => {
           className="w-12 h-12 rounded-full bg-[#1e1e24] flex items-center justify-center text-white cursor-pointer-hover"
           onClick={(e) => onTabClick && onTabClick("chat", e)}
         >
-          <MessageSquare className="h-5 w-5" />
+          <BookOpen className="h-5 w-5" />
         </div>
       </div>
     </div>

@@ -10,9 +10,9 @@ import {
   User,
   Briefcase,
   Mail,
-  MessageSquare,
   Settings,
   Download,
+  BookOpen,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
@@ -23,6 +23,7 @@ import CustomeButton from "@/components/customeButton";
 import { useTheme } from "next-themes";
 import me from "../../public/images/me.jpg";
 import WorkScreen from "@/components/work-screen";
+import BlogScreen from "@/components/blog-screen";
 
 export default function HomePage() {
   const [activeScreen, setActiveScreen] = useState("home");
@@ -251,14 +252,14 @@ export default function HomePage() {
                   <div className="group relative flex items-center justify-end">
                     <div className="absolute right-0 h-12 overflow-hidden flex items-center transition-all duration-300 rounded-full bg-[#6957AF] text-white opacity-0 group-hover:opacity-100 group-hover:w-32">
                       <span className="pl-4 pr-16 font-medium whitespace-nowrap">
-                        CHAT
+                        BLOGS
                       </span>
                     </div>
                     <div
                       className="z-10 w-12 h-12 rounded-full bg-[#1e1e24] group-hover:bg-[#6957AF] flex items-center justify-center text-white cursor-pointer-hover"
                       onClick={(e) => handleTabClick("chat", e)}
                     >
-                      <MessageSquare className="h-5 w-5" />
+                      <BookOpen className="h-5 w-5" />
                     </div>
                   </div>
                 </div>
@@ -329,7 +330,7 @@ export default function HomePage() {
                 className="w-12 h-12 rounded-full bg-[#1e1e24] flex items-center justify-center text-white cursor-pointer-hover"
                 onClick={(e) => handleTabClick("chat", e)}
               >
-                <MessageSquare className="h-5 w-5" />
+                <BookOpen className="h-5 w-5" />
               </div>
             </div>
           </motion.div>
@@ -340,26 +341,27 @@ export default function HomePage() {
         ) : activeScreen === "contact" ? (
           <ContactScreen key="contact" onTabClick={handleTabClick} />
         ) : (
-          <motion.div
-            key="placeholder"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="flex items-center justify-center min-h-screen bg-black text-white"
-          >
-            <div className="text-center">
-              <h2 className="text-3xl font-bold mb-4">
-                {activeScreen.toUpperCase()} Page
-              </h2>
-              <p className="mb-6">This page is under construction</p>
-              <Button
-                className="bg-[#6957AF] hover:bg-[#5a4a9e] text-white cursor-pointer-hover"
-                onClick={(e) => handleTabClick("home", e)}
-              >
-                Back to Home
-              </Button>
-            </div>
-          </motion.div>
+          <BlogScreen key="blog" onTabClick={handleTabClick} />
+          // <motion.div
+          //   key="placeholder"
+          //   initial={{ opacity: 0 }}
+          //   animate={{ opacity: 1 }}
+          //   exit={{ opacity: 0 }}
+          //   className="flex items-center justify-center min-h-screen bg-black text-white"
+          // >
+          //   <div className="text-center">
+          //     <h2 className="text-3xl font-bold mb-4">
+          //       {activeScreen.toUpperCase()} Page
+          //     </h2>
+          //     <p className="mb-6">This page is under construction</p>
+          //     <Button
+          //       className="bg-[#6957AF] hover:bg-[#5a4a9e] text-white cursor-pointer-hover"
+          //       onClick={(e) => handleTabClick("home", e)}
+          //     >
+          //       Back to Home
+          //     </Button>
+          //   </div>
+          // </motion.div>
         )}
       </AnimatePresence>
     </div>
