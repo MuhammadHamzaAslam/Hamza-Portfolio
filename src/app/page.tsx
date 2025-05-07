@@ -5,14 +5,7 @@ import type React from "react";
 import { useState, useRef } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import {
-  Home,
-  User,
-  Briefcase,
-  Mail,
-  Settings,
-  BookOpen,
-} from "lucide-react";
+import { Home, User, Briefcase, Mail, Settings, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
 import AboutScreen from "@/components/about-screen";
@@ -116,7 +109,9 @@ export default function HomePage() {
                 </p>
                 <div className="flex items-center justify-center mb-15">
                   <button
-                    onClick={(e: any) => handleTabClick("about", e)}
+                    onClick={(
+                      e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+                    ) => handleTabClick("about", e)}
                     className="button type-1 flex items-center rounded-full overflow-hidden  hover:bg-[#6957AF] border border-[#6957AF] transition-all duration-300 group"
                   >
                     <span
@@ -280,7 +275,9 @@ export default function HomePage() {
                     the lives of those around me.
                   </p>
                   <button
-                    onClick={(e: any) => handleTabClick("about", e)}
+                    onClick={(
+                      e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+                    ) => handleTabClick("about", e)}
                     className="button type-1 flex items-center rounded-full overflow-hidden  hover:bg-[#6957AF] border border-[#6957AF] transition-all duration-300 group"
                   >
                     <span

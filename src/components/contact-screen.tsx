@@ -66,6 +66,7 @@ const ContactScreen = ({ onTabClick }: ContactScreenProps) => {
         setSubmitStatus("error");
       }
     } catch (error) {
+      console.error(error);
       setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
