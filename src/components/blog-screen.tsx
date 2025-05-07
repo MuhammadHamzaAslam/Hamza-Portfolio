@@ -3,11 +3,11 @@
 import type React from "react";
 
 import { useState, useRef, useEffect } from "react";
-import { useTheme } from "next-themes";
 import { ThemeToggle } from "./theme-toggle";
 import { Home, User, Briefcase, Mail, BookOpen } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useTheme } from "next-themes";
 
 interface BlogPost {
   id: number;
@@ -23,7 +23,6 @@ interface BlogScreenProps {
 }
 
 const BlogScreen = ({ onTabClick }: BlogScreenProps) => {
-  const { theme } = useTheme();
   const [isPaused, setIsPaused] = useState(false);
   const carouselRef = useRef<HTMLDivElement>(null);
   const [currentQuote, setCurrentQuote] = useState(0);
@@ -123,11 +122,8 @@ const BlogScreen = ({ onTabClick }: BlogScreenProps) => {
         {/* MY BLOG Header */}
         <div className="flex justify-center mb-16">
           <h1 className="text-6xl md:text-7xl font-extrabold relative">
-            <span className="text-[#333333] absolute -left-14 top-0">P</span>
-            <span className="text-black dark:text-white">MY </span>
-            <span className="text-[#8BC34A]">
-              BLOG
-              <span className="text-[#333333] absolute -right-14 top-0">S</span>
+            <span className="text-[#6957AF]">
+             MY BLOGS
             </span>
             {/* Text shadow effect */}
             <span
@@ -138,7 +134,7 @@ const BlogScreen = ({ onTabClick }: BlogScreenProps) => {
                 zIndex: -1,
               }}
             >
-              MY BLOG
+              MY BLOGS
             </span>
           </h1>
         </div>
@@ -183,10 +179,10 @@ const BlogScreen = ({ onTabClick }: BlogScreenProps) => {
         <div className="mb-16">
           <div className="relative bg-gradient-to-r from-[#f5f5f5] to-[#e8f5e9] dark:from-[#1a1a1a] dark:to-[#1e3320] rounded-2xl p-8 md:p-12 overflow-hidden">
             {/* Decorative elements */}
-            <div className="absolute top-0 right-0 w-32 h-32 bg-[#8BC34A]/10 rounded-full -mr-16 -mt-16"></div>
-            <div className="absolute bottom-0 left-0 w-24 h-24 bg-[#8BC34A]/10 rounded-full -ml-12 -mb-12"></div>
+            <div className="absolute top-0 right-0 w-32 h-32 bg-[#6957AF]/10 rounded-full -mr-16 -mt-16"></div>
+            <div className="absolute bottom-0 left-0 w-24 h-24 bg-[#6957AF]/10 rounded-full -ml-12 -mb-12"></div>
 
-            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-[#8BC34A] relative z-10">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-[#6957AF] relative z-10">
               Quote of the Day
             </h2>
 
@@ -199,16 +195,16 @@ const BlogScreen = ({ onTabClick }: BlogScreenProps) => {
                 transition={{ duration: 0.5 }}
               >
                 <blockquote className="text-xl md:text-2xl italic mb-4 text-gray-700 dark:text-gray-300">
-                  "{quotes[currentQuote].text}"
+                  {quotes[currentQuote].text} 
                 </blockquote>
-                <cite className="text-right block text-lg text-[#8BC34A] font-medium">
+                <cite className="text-right block text-lg text-[#6957AF] font-medium">
                   — {quotes[currentQuote].author}
                 </cite>
               </motion.div>
             </div>
 
             {/* Quote icon */}
-            <div className="absolute top-8 right-8 text-[#8BC34A]/10 dark:text-[#8BC34A]/5">
+            <div className="absolute top-8 right-8 text-[#6957AF]/10 dark:text-[#6957AF]/5">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="80"
@@ -366,7 +362,7 @@ const BlogCard = ({ post }: { post: BlogPost }) => {
           className="object-cover transition-transform duration-500 hover:scale-110"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
-        <div className="absolute top-4 left-4 bg-[#8BC34A] text-white text-xs font-bold px-3 py-1 rounded-full">
+        <div className="absolute top-4 left-4 bg-[#6957AF] text-white text-xs font-bold px-3 py-1 rounded-full">
           {post.category}
         </div>
       </div>
@@ -383,7 +379,7 @@ const BlogCard = ({ post }: { post: BlogPost }) => {
           <span className="text-sm text-gray-500 dark:text-gray-400">
             {post.date}
           </span>
-          <button className="text-[#8BC34A] hover:text-[#689F38] font-medium text-sm">
+          <button className="text-[#6957AF] hover:text-[#689F38] font-medium text-sm">
             Read More
           </button>
         </div>

@@ -11,7 +11,6 @@ import {
   Briefcase,
   Mail,
   Settings,
-  Download,
   BookOpen,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -19,7 +18,6 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import AboutScreen from "@/components/about-screen";
 import ContactScreen from "@/components/contact-screen";
 import { TiArrowRightThick } from "react-icons/ti";
-import CustomeButton from "@/components/customeButton";
 import { useTheme } from "next-themes";
 import me from "../../public/images/me.jpg";
 import WorkScreen from "@/components/work-screen";

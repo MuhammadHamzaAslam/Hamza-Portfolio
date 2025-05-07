@@ -12,14 +12,10 @@ import {
   Mail,
   MessageSquare,
   Send,
-  Download,
   BookOpen,
 } from "lucide-react";
 import {
   FaFacebookF,
-  FaTwitter,
-  FaYoutube,
-  FaDribbble,
   FaLinkedin,
   FaInstagram,
 } from "react-icons/fa";
@@ -241,7 +237,7 @@ const ContactScreen = ({ onTabClick }: ContactScreenProps) => {
                   Message Sent Successfully!
                 </h3>
                 <p className="text-green-700 dark:text-green-300 mb-4">
-                  Thank you for your message. I'll get back to you as soon as
+                  Thank you for your message. I&apos;ll get back to you as soon as
                   possible.
                 </p>
                 <button

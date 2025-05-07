@@ -3,7 +3,6 @@
 import type React from "react";
 
 import { useState } from "react";
-import { useTheme } from "next-themes";
 import { ThemeToggle } from "./theme-toggle";
 import {
   Github,
@@ -30,7 +29,6 @@ interface WorkScreenProps {
 }
 
 const WorkScreen = ({ onTabClick }: WorkScreenProps) => {
-  const { theme } = useTheme();
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
 
   // Project data
