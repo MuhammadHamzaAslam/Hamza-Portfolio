@@ -181,7 +181,7 @@
   /* height: 50px;
   width: 250px; */
   position: relative;
-  background-color: transparent;
+  /* background-color: transparent; */
   cursor: pointer;
   border: 2px solid #6957af;
   overflow: hidden;

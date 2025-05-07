@@ -22,6 +22,7 @@ import { TiArrowRightThick } from "react-icons/ti";
 import CustomeButton from "@/components/customeButton";
 import { useTheme } from "next-themes";
 import me from "../../public/images/me.jpg";
+import WorkScreen from "@/components/work-screen";
 
 export default function HomePage() {
   const [activeScreen, setActiveScreen] = useState("home");
@@ -122,7 +123,7 @@ export default function HomePage() {
                     <span
                       className={`font-medium text-sm px-6 py-3 ${
                         theme === "dark" ? "text-white" : "text-black"
-                      }`}
+                      } hover:text-white`}
                     >
                       More About Me
                     </span>
@@ -286,7 +287,7 @@ export default function HomePage() {
                     <span
                       className={`font-medium text-sm px-6 py-3 ${
                         theme === "dark" ? "text-white" : "text-black"
-                      }`}
+                      } hover:text-white`}
                     >
                       More About Me
                     </span>
@@ -334,6 +335,8 @@ export default function HomePage() {
           </motion.div>
         ) : activeScreen === "about" ? (
           <AboutScreen key="about" onTabClick={handleTabClick} />
+        ) : activeScreen === "work" ? (
+          <WorkScreen key="work" onTabClick={handleTabClick} />
         ) : activeScreen === "contact" ? (
           <ContactScreen key="contact" onTabClick={handleTabClick} />
         ) : (

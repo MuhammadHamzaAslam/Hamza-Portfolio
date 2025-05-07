@@ -36,6 +36,10 @@ const ContactScreen = ({ onTabClick }: ContactScreenProps) => {
     subject: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -44,10 +48,31 @@ const ContactScreen = ({ onTabClick }: ContactScreenProps) => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    setFormData({ name: "", email: "", subject: "", message: "" });
+    setIsSubmitting(true);
+    setSubmitStatus("idle");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSubmitStatus("success");
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      } else {
+        setSubmitStatus("error");
+      }
+    } catch (error) {
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -138,7 +163,7 @@ const ContactScreen = ({ onTabClick }: ContactScreenProps) => {
             </div>
           </div>
 
-          <div>
+          {/* <div>
             <form onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
@@ -193,11 +218,11 @@ const ContactScreen = ({ onTabClick }: ContactScreenProps) => {
               </div>
 
               <div className="flex justify-center md:justify-start">
-                <button className="button type-1 flex items-center rounded-full overflow-hidden  hover:bg-[#6957AF] border border-[#6957AF] transition-all duration-300 group">
+                <button className="button type-1 flex items-center rounded-full overflow-hidden hover:bg-[#6957AF] border border-[#6957AF] transition-all duration-300 group">
                   <span
                     className={`font-medium text-sm px-6 py-3 ${
                       theme === "dark" ? "text-white" : "text-black"
-                    }`}
+                    } hover:text-white`}
                   >
                     More About Me
                   </span>
@@ -207,6 +232,113 @@ const ContactScreen = ({ onTabClick }: ContactScreenProps) => {
                 </button>
               </div>
             </form>
+          </div> */}
+          <div>
+            {submitStatus === "success" ? (
+              <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg border border-green-200 dark:border-green-800">
+                <h3 className="text-xl font-bold text-green-600 dark:text-green-400 mb-2">
+                  Message Sent Successfully!
+                </h3>
+                <p className="text-green-700 dark:text-green-300 mb-4">
+                  Thank you for your message. I'll get back to you as soon as
+                  possible.
+                </p>
+                <button
+                  onClick={() => setSubmitStatus("idle")}
+                  className="px-4 py-2 bg-green-600 text-white rounded-full hover:bg-green-700 transition-colors"
+                >
+                  Send Another Message
+                </button>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit}>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                  <div>
+                    <input
+                      type="text"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      placeholder="YOUR NAME"
+                      className="w-full px-6 py-4 rounded-full border border-gray-300 dark:border-gray-700 bg-transparent focus:outline-none focus:border-[#6957AF]"
+                      required
+                    />
+                  </div>
+                  <div className="relative">
+                    <input
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      placeholder="YOUR EMAIL"
+                      className="w-full px-6 py-4 rounded-full border border-gray-300 dark:border-gray-700 bg-transparent focus:outline-none focus:border-[#6957AF]"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div className="mb-6">
+                  <input
+                    type="text"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    placeholder="YOUR SUBJECT"
+                    className="w-full px-6 py-4 rounded-full border border-gray-300 dark:border-gray-700 bg-transparent focus:outline-none focus:border-[#6957AF]"
+                    required
+                  />
+                </div>
+
+                <div className="mb-8">
+                  <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    placeholder="YOUR MESSAGE"
+                    rows={6}
+                    className="w-full px-6 py-4 rounded-3xl border border-gray-300 dark:border-gray-700 bg-transparent focus:outline-none focus:border-[#6957AF] resize-none"
+                    required
+                  ></textarea>
+                </div>
+
+                {submitStatus === "error" && (
+                  <div className="mb-6 text-red-500 dark:text-red-400">
+                    There was an error sending your message. Please try again.
+                  </div>
+                )}
+
+                <div className="flex justify-center md:justify-start">
+                  {/* <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="group flex items-center space-x-2 px-8 py-4 rounded-full border border-gray-300 dark:border-gray-700 hover:border-[#6957AF] transition-colors cursor-pointer-hover disabled:opacity-70 disabled:cursor-not-allowed"
+                  >
+                    <span className="font-medium">
+                      {isSubmitting ? "SENDING..." : "SEND MESSAGE"}
+                    </span>
+                    <div className="w-10 h-10 rounded-full bg-[#6957AF] flex items-center justify-center text-white">
+                      <Send size={18} />
+                    </div>
+                  </button> */}
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="button type-1 flex items-center rounded-full overflow-hidden hover:bg-[#6957AF] border border-[#6957AF] transition-all duration-300 group"
+                  >
+                    <span
+                      className={`font-medium text-sm px-6 py-3 ${
+                        theme === "dark" ? "text-white" : "text-black"
+                      } hover:text-white`}
+                    >
+                      {isSubmitting ? "SENDING..." : "SEND MESSAGE"}
+                    </span>
+                    <div className="w-12 h-12 rounded-full bg-[#6957AF] flex items-center justify-center text-white">
+                      <Send className="h-5 w-5" />
+                    </div>
+                  </button>
+                </div>
+              </form>
+            )}
           </div>
         </div>
       </div>

@@ -69,7 +69,7 @@ const PersonalInfo = () => {
           <span
             className={`font-medium text-sm px-6 py-3 ${
               theme === "dark" ? "text-white" : "text-black"
-            }`}
+            }hover:text-white`}
           >
             DOWNLOAD CV
           </span>
