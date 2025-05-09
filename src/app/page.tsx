@@ -27,19 +27,16 @@ export default function HomePage() {
   const handleTabClick = (screen: string, e: React.MouseEvent) => {
     if (isAnimating) return;
 
-    // Get click position relative to viewport
     const x = e.clientX;
     const y = e.clientY;
 
     setAnimationOrigin({ x, y });
     setIsAnimating(true);
 
-    // Delay the screen change to allow animation to start
     setTimeout(() => {
       setActiveScreen(screen);
     }, 300);
 
-    // Reset animation state after animation completes
     setTimeout(() => {
       setIsAnimating(false);
     }, 1000);
@@ -50,7 +47,6 @@ export default function HomePage() {
       className="min-h-screen flex flex-col relative cursor-custom"
       ref={containerRef}
     >
-      {/* Circular reveal animation overlay */}
       <AnimatePresence>
         {isAnimating && (
           <motion.div
@@ -337,26 +333,6 @@ export default function HomePage() {
           <ContactScreen key="contact" onTabClick={handleTabClick} />
         ) : (
           <BlogScreen key="blog" onTabClick={handleTabClick} />
-          // <motion.div
-          //   key="placeholder"
-          //   initial={{ opacity: 0 }}
-          //   animate={{ opacity: 1 }}
-          //   exit={{ opacity: 0 }}
-          //   className="flex items-center justify-center min-h-screen bg-black text-white"
-          // >
-          //   <div className="text-center">
-          //     <h2 className="text-3xl font-bold mb-4">
-          //       {activeScreen.toUpperCase()} Page
-          //     </h2>
-          //     <p className="mb-6">This page is under construction</p>
-          //     <Button
-          //       className="bg-[#6957AF] hover:bg-[#5a4a9e] text-white cursor-pointer-hover"
-          //       onClick={(e) => handleTabClick("home", e)}
-          //     >
-          //       Back to Home
-          //     </Button>
-          //   </div>
-          // </motion.div>
         )}
       </AnimatePresence>
     </div>

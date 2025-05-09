@@ -14,11 +14,7 @@ import {
   Send,
   BookOpen,
 } from "lucide-react";
-import {
-  FaFacebookF,
-  FaLinkedin,
-  FaInstagram,
-} from "react-icons/fa";
+import { FaFacebookF, FaLinkedin, FaInstagram } from "react-icons/fa";
 import Link from "next/link";
 
 interface ContactScreenProps {
@@ -141,19 +137,22 @@ const ContactScreen = ({ onTabClick }: ContactScreenProps) => {
             {/* Social Media */}
             <div className="flex space-x-3">
               <Link
-                href="#"
+                href="https://www.facebook.com/MuhammadHamzaAslam19"
+                target="_blank"
                 className="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-[#6957AF] hover:text-white transition-colors"
               >
                 <FaFacebookF size={16} />
               </Link>
               <Link
-                href="#"
+                href="https://www.linkedin.com/in/muhammad-hamza-7417992b6/"
+                target="_blank"
                 className="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-[#6957AF] hover:text-white transition-colors"
               >
                 <FaLinkedin size={16} />
               </Link>
               <Link
-                href="#"
+                href="https://www.instagram.com/muhammad_hamza_19/"
+                target="_blank"
                 className="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-[#6957AF] hover:text-white transition-colors"
               >
                 <FaInstagram size={16} />
@@ -238,8 +237,8 @@ const ContactScreen = ({ onTabClick }: ContactScreenProps) => {
                   Message Sent Successfully!
                 </h3>
                 <p className="text-green-700 dark:text-green-300 mb-4">
-                  Thank you for your message. I&apos;ll get back to you as soon as
-                  possible.
+                  Thank you for your message. I&apos;ll get back to you as soon
+                  as possible.
                 </p>
                 <button
                   onClick={() => setSubmitStatus("idle")}

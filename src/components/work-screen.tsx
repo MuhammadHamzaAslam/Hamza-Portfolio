@@ -59,7 +59,7 @@ const WorkScreen = ({ onTabClick }: WorkScreenProps) => {
     },
     {
       id: 2,
-      title: "Wravel",
+      title: "Wravel App – A Revolutionary Clothing Exchange Platform",
       category: "Mobile App",
       image: "/projects/lucky-cat.jpg",
       images: [
@@ -69,8 +69,20 @@ const WorkScreen = ({ onTabClick }: WorkScreenProps) => {
       ],
       github: "https://github.com",
       description:
-        "A travel planning mobile application that helps users organize their trips, discover attractions, and share their experiences with friends and family.",
-      skills: ["Flutter", "Dart", "Firebase", "RESTful APIs"],
+        "Wravel is an innovative clothing app that allows users to add their favorite clothes and swap them with others. If you have clothes that you no longer use, you can exchange them for items you desire by sending swap requests to other product owners. If you haven't added any clothes, you can also place a bid on products and purchase them.One of the key features of Wravel is its chat functionality, where users can communicate with each other, finalize swap deals, and provide feedback on products.The goal of Wravel is to give people a platform where they can refresh their wardrobe by exchanging clothes instead of letting them go to waste. Wravel is a dynamic and engaging platform that makes clothing exchange easy, convenient, and fun.",
+      skills: [
+        "React Native CLI",
+        "Axios",
+        "Firebase Google Auth",
+        "RESTful APIs",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "NodeMailer",
+        "Zod",
+        "cloudinary",
+        "moongoose",
+      ],
     },
     {
       id: 3,
@@ -156,7 +168,14 @@ const WorkScreen = ({ onTabClick }: WorkScreenProps) => {
       link: "https://patient-appointment-system-plum.vercel.app/",
       description:
         "A healthcare appointment scheduling system that allows patients to book appointments with doctors, manage their medical records, and receive reminders for upcoming appointments.",
-      skills: ["Next.js" , "antd", "Node.js", "Express" , "Tailwind CSS", "MongoDB"],
+      skills: [
+        "Next.js",
+        "antd",
+        "Node.js",
+        "Express",
+        "Tailwind CSS",
+        "MongoDB",
+      ],
     },
   ];
 
