@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import favicon from "../../public/images/favicon.webp";
+import CustomCursor from "@/components/cursor";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,6 +28,7 @@ export default function RootLayout({
       </head>
 
       <body className={inter.className}>
+        <CustomCursor />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
