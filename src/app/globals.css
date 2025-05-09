@@ -247,9 +247,26 @@
   left: 0;
   width: 8px;
   height: 8px;
-  background-color: #6957AF;
+  background-color: #6957af;
   border-radius: 50%;
   pointer-events: none;
   transform: translate(-50%, -50%);
   z-index: 9999;
+}
+
+.cursor-bubble-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9990;
+}
+
+.cursor-bubble {
+  position: absolute;
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  background-color: rgba(0, 191, 255, 0.3);
+  transform: translate(-50%, -50%);
 }
