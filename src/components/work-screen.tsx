@@ -61,11 +61,12 @@ const WorkScreen = ({ onTabClick }: WorkScreenProps) => {
       id: 2,
       title: "Wravel App – A Revolutionary Clothing Exchange Platform",
       category: "Mobile App",
-      image: "/projects/lucky-cat.jpg",
+      image:
+        "https://res.cloudinary.com/diyujhtuc/image/upload/v1746871532/college_3_fmfdrc.png",
       images: [
-        "/projects/lucky-cat.jpg",
-        "/projects/paper-boat.jpg",
-        "/projects/flower.jpg",
+        "https://res.cloudinary.com/diyujhtuc/image/upload/v1746871532/college_3_fmfdrc.png",
+        "https://res.cloudinary.com/diyujhtuc/image/upload/v1746871532/college_1_ofyeum.png",
+        "https://res.cloudinary.com/diyujhtuc/image/upload/v1746871533/college_2_gnz1dc.png",
       ],
       github: "https://github.com",
       description:
