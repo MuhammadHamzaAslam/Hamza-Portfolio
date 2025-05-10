@@ -22,6 +22,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  console.log('Analytics ==> ', Analytics);
+  
   return (
     <html lang="en" suppressHydrationWarning>
       <head title="M Hamza - Web & Mobile App Developer">
