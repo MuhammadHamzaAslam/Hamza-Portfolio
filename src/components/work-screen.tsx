@@ -46,7 +46,8 @@ const WorkScreen = ({ onTabClick }: WorkScreenProps) => {
       id: 1,
       title: "Voyyo",
       category: "Mobile App",
-      image: "https://res.cloudinary.com/diyujhtuc/image/upload/v1751450318/voyyo_poster_1_rxparr.png",
+      image:
+        "https://res.cloudinary.com/diyujhtuc/image/upload/v1751450318/voyyo_poster_1_rxparr.png",
       images: [
         "https://res.cloudinary.com/diyujhtuc/image/upload/v1751450318/voyyo_poster_1_rxparr.png",
         "https://res.cloudinary.com/diyujhtuc/image/upload/v1751450315/voyyo_poster_2_bmx0gs.png",
@@ -183,6 +184,27 @@ const WorkScreen = ({ onTabClick }: WorkScreenProps) => {
         "Express",
         "Tailwind CSS",
         "MongoDB",
+      ],
+    },
+    {
+      id: 7,
+      title: "Background Remover AI",
+      category: "web",
+      image:
+        "https://res.cloudinary.com/diyujhtuc/image/upload/v1765103201/Gemini_Generated_Image_bm0lrbm0lrbm0lrb_ewztyw.png",
+      images: [
+        "https://res.cloudinary.com/diyujhtuc/image/upload/v1765103201/Gemini_Generated_Image_bm0lrbm0lrbm0lrb_ewztyw.png",
+      ],
+      github: "https://github.com/MuhammadHamzaAslam/BACKGROUND_REMOVER",
+      link: "https://patient-appointment-system-plum.vercel.app/",
+      description:
+        "I developed this AI-powered web tool using React, TypeScript, and Framer Motion for the frontend, coupled with the ClipDrop API for high-precision background removal. This project was a great exercise in robust development practices, including:Implementing secure client-side API calls with environment variables (Vite/TypeScript).Building a maintainable component architecture (Header, Hero, CTA, etc.).Ensuring type safety across all components to deliver a stable product.What it does:Instantly removes the background from any image.Provides a high-quality, transparent PNG output.It's free and easy to use—no sign-ups required.I'd love for you to give it a try and share your feedback! ",
+      skills: [
+        "React.ts",
+        "shadcn/ui",
+        "framer-motion",
+        "Tailwind CSS",
+        "Clipdrop API",
       ],
     },
   ];
