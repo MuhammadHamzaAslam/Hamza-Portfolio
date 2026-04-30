@@ -72,22 +72,37 @@ const TimelineItem = ({
 const ExperienceEducation = () => {
   const { theme } = useTheme();
 
-  // const experienceItems = [
-  //   {
-  //     year: "2025 - PRESENT",
-  //     title: "Matriculation",
-  //     company: "K.M.A School",
-  //     description: "Currently Doing Matriculation.",
-  //   },
-  // ];
+  const experienceItems = [
+    {
+      year: "February 2025 - August 2025",
+      title: "Internship",
+      company: "BNG Labs",
+      description: `I had the opportunity to work as a Mobile App Developer, where I worked on real-world projects. During
+this time, I developed two main applications:
+Wravel: A wardrobe and clothing app.
+Voyyo: A ride-hailing app similar to Uber and Careem.
+This was my first experience, and I learned a lot.`,
+    },
+    {
+      year: "February 2025 - Present",
+      title: "Freelancing",
+      company: "Upwork",
+      description: `Developing production-ready mobile and web MVPs using the MERN stack and React Native. Focused on building scalable architectures, high-performance UI/UX, and delivering custom solutions for diverse project requirements.`,
+    },
+  ];
 
   const educationItems = [
     {
-      year: "2025-Present",
+      year: "2012 - March 2026",
       title: "Matriculation",
       company: "K.M.A School",
-      description:
-        "Currently Doing Matriculation.",
+      description: "Matriculation.",
+    },
+    {
+      year: "2026 - Present",
+      title: "Intermediate",
+      company: "Govt PECHS College",
+      description: "Intermediate.",
     },
     {
       year: "2025",
@@ -100,8 +115,7 @@ const ExperienceEducation = () => {
       year: "2025",
       title: "Javascript Essentials",
       company: "Cisco",
-      description:
-        "Certified Javascript Essentials from Cisco.",
+      description: "Certified Javascript Essentials from Cisco.",
     },
   ];
 
@@ -119,7 +133,7 @@ const ExperienceEducation = () => {
       </motion.h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
-        {/* <div>
+        <div>
           {experienceItems.map((item, index) => (
             <TimelineItem
               key={index}
@@ -130,7 +144,7 @@ const ExperienceEducation = () => {
               description={item.description}
             />
           ))}
-        </div> */}
+        </div>
 
         <div>
           {educationItems.map((item, index) => (

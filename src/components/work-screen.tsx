@@ -47,9 +47,9 @@ const WorkScreen = ({ onTabClick }: WorkScreenProps) => {
       title: "Voyyo",
       category: "Mobile App",
       image:
-        "https://res.cloudinary.com/diyujhtuc/image/upload/v1751450318/voyyo_poster_1_rxparr.png",
+        "https://res.cloudinary.com/diyujhtuc/image/upload/v1777563005/Voyyo_Thumbnail_xn8mdl.png",
       images: [
-        "https://res.cloudinary.com/diyujhtuc/image/upload/v1751450318/voyyo_poster_1_rxparr.png",
+        "https://res.cloudinary.com/diyujhtuc/image/upload/v1777563005/Voyyo_Thumbnail_xn8mdl.png",
         "https://res.cloudinary.com/diyujhtuc/image/upload/v1751450315/voyyo_poster_2_bmx0gs.png",
         "https://res.cloudinary.com/diyujhtuc/image/upload/v1751450323/voyyo_poster_3_oyfilx.png",
         "https://res.cloudinary.com/diyujhtuc/image/upload/v1751450323/voyyo_poster_4_hslary.png",
@@ -70,8 +70,9 @@ const WorkScreen = ({ onTabClick }: WorkScreenProps) => {
       title: "Wravel App – A Revolutionary Clothing Exchange Platform",
       category: "Mobile App",
       image:
-        "https://res.cloudinary.com/diyujhtuc/image/upload/v1754985983/wravel_Poster_1_dfwwbz.png",
+        "https://res.cloudinary.com/diyujhtuc/image/upload/v1777562943/Wravel_Thumbnail_hheetd.png",
       images: [
+        "https://res.cloudinary.com/diyujhtuc/image/upload/v1754985983/wravel_Poster_1_dfwwbz.png",
         "https://res.cloudinary.com/diyujhtuc/image/upload/v1746871532/college_3_fmfdrc.png",
         "https://res.cloudinary.com/diyujhtuc/image/upload/v1746871532/college_1_ofyeum.png",
         "https://res.cloudinary.com/diyujhtuc/image/upload/v1746871533/college_2_gnz1dc.png",
@@ -98,8 +99,9 @@ const WorkScreen = ({ onTabClick }: WorkScreenProps) => {
       title: "Learning Management System",
       category: "web",
       image:
-        "https://res.cloudinary.com/durstxroh/image/upload/v1738266615/qgzeq3ispks3yelmabkm.png",
+        "https://res.cloudinary.com/diyujhtuc/image/upload/v1777563033/1_qne159.png",
       images: [
+        "https://res.cloudinary.com/diyujhtuc/image/upload/v1777563035/2_r1npin.png",
         "https://res.cloudinary.com/durstxroh/image/upload/v1738266615/qgzeq3ispks3yelmabkm.png",
         "https://res.cloudinary.com/durstxroh/image/upload/v1738266833/me5wchetfviuhzvix3jc.png",
         "https://res.cloudinary.com/durstxroh/image/upload/v1738266775/khoy1rztqttzlgu457al.png",
@@ -125,9 +127,9 @@ const WorkScreen = ({ onTabClick }: WorkScreenProps) => {
         "Dynamic E-Commerce Platform with Advanced Admin Panel & Real-Time Tracking",
       category: "web",
       image:
-        "https://res.cloudinary.com/durstxroh/image/upload/v1738331715/ecommerce_xgx5fq.png",
+        "https://res.cloudinary.com/diyujhtuc/image/upload/v1777562931/POS_E-Commerce_Thumbnail_ghq9oj.png",
       images: [
-        "https://res.cloudinary.com/durstxroh/image/upload/v1738331715/ecommerce_xgx5fq.png",
+        "https://res.cloudinary.com/diyujhtuc/image/upload/v1777562931/POS_E-Commerce_Thumbnail_ghq9oj.png",
         "https://res.cloudinary.com/durstxroh/image/upload/v1738331714/ecommerce3_u5ziws.png",
         "https://res.cloudinary.com/durstxroh/image/upload/v1738331727/ecommerce1_p3qjvo.png",
       ],
@@ -145,21 +147,25 @@ const WorkScreen = ({ onTabClick }: WorkScreenProps) => {
       ],
     },
     {
-      id: 5,
-      title: "WebGlowing: Your Ultimate Developer Tool Hub",
+      id: 7,
+      title: "Background Remover AI",
       category: "web",
       image:
-        "https://res.cloudinary.com/durstxroh/image/upload/v1738332395/clpjk3hiym7xldinjvmm.png",
+        "https://res.cloudinary.com/diyujhtuc/image/upload/v1777562991/AI_BG_Remover_Thumbnail_xjru7p.png",
       images: [
-        "https://res.cloudinary.com/durstxroh/image/upload/v1738332395/clpjk3hiym7xldinjvmm.png",
-        "https://res.cloudinary.com/durstxroh/image/upload/v1738332394/o0fozk32d1goq4tyfqja.png",
-        "https://res.cloudinary.com/durstxroh/image/upload/v1738332395/eppjtjvv0fqd2ui7vj1m.png",
+        "https://res.cloudinary.com/diyujhtuc/image/upload/v1765103201/Gemini_Generated_Image_bm0lrbm0lrbm0lrb_ewztyw.png",
       ],
-      github: "https://github.com/MuhammadHamzaAslam/Web-Glowing",
-      link: "webglowing.com",
+      github: "https://github.com/MuhammadHamzaAslam/BACKGROUND_REMOVER",
+      link: "https://background-remover-ten-xi.vercel.app/",
       description:
-        "A comprehensive collection of tools and resources for web developers. Features include code snippets, tutorials, and a community forum for developers to share knowledge.",
-      skills: ["Next.js", "TypeScript", "Tailwind CSS", "Prisma", "PostgreSQL"],
+        "I developed this AI-powered web tool using React, TypeScript, and Framer Motion for the frontend, coupled with the ClipDrop API for high-precision background removal. This project was a great exercise in robust development practices, including:Implementing secure client-side API calls with environment variables (Vite/TypeScript).Building a maintainable component architecture (Header, Hero, CTA, etc.).Ensuring type safety across all components to deliver a stable product.What it does:Instantly removes the background from any image.Provides a high-quality, transparent PNG output.It's free and easy to use—no sign-ups required.I'd love for you to give it a try and share your feedback! ",
+      skills: [
+        "React.ts",
+        "shadcn/ui",
+        "framer-motion",
+        "Tailwind CSS",
+        "Clipdrop API",
+      ],
     },
     {
       id: 6,
@@ -187,25 +193,21 @@ const WorkScreen = ({ onTabClick }: WorkScreenProps) => {
       ],
     },
     {
-      id: 7,
-      title: "Background Remover AI",
+      id: 5,
+      title: "WebGlowing: Your Ultimate Developer Tool Hub",
       category: "web",
       image:
-        "https://res.cloudinary.com/diyujhtuc/image/upload/v1765103201/Gemini_Generated_Image_bm0lrbm0lrbm0lrb_ewztyw.png",
+        "https://res.cloudinary.com/durstxroh/image/upload/v1738332395/clpjk3hiym7xldinjvmm.png",
       images: [
-        "https://res.cloudinary.com/diyujhtuc/image/upload/v1765103201/Gemini_Generated_Image_bm0lrbm0lrbm0lrb_ewztyw.png",
+        "https://res.cloudinary.com/durstxroh/image/upload/v1738332395/clpjk3hiym7xldinjvmm.png",
+        "https://res.cloudinary.com/durstxroh/image/upload/v1738332394/o0fozk32d1goq4tyfqja.png",
+        "https://res.cloudinary.com/durstxroh/image/upload/v1738332395/eppjtjvv0fqd2ui7vj1m.png",
       ],
-      github: "https://github.com/MuhammadHamzaAslam/BACKGROUND_REMOVER",
-      link: "https://patient-appointment-system-plum.vercel.app/",
+      github: "https://github.com/MuhammadHamzaAslam/Web-Glowing",
+      link: "webglowing.com",
       description:
-        "I developed this AI-powered web tool using React, TypeScript, and Framer Motion for the frontend, coupled with the ClipDrop API for high-precision background removal. This project was a great exercise in robust development practices, including:Implementing secure client-side API calls with environment variables (Vite/TypeScript).Building a maintainable component architecture (Header, Hero, CTA, etc.).Ensuring type safety across all components to deliver a stable product.What it does:Instantly removes the background from any image.Provides a high-quality, transparent PNG output.It's free and easy to use—no sign-ups required.I'd love for you to give it a try and share your feedback! ",
-      skills: [
-        "React.ts",
-        "shadcn/ui",
-        "framer-motion",
-        "Tailwind CSS",
-        "Clipdrop API",
-      ],
+        "A comprehensive collection of tools and resources for web developers. Features include code snippets, tutorials, and a community forum for developers to share knowledge.",
+      skills: ["Next.js", "TypeScript", "Tailwind CSS", "Prisma", "PostgreSQL"],
     },
   ];
 
@@ -251,6 +253,7 @@ const WorkScreen = ({ onTabClick }: WorkScreenProps) => {
           {projects.map((project) => (
             <div
               key={project.id}
+              // className="relative rounded-lg overflow-hidden aspect-[4/3] group"
               className="relative rounded-lg overflow-hidden aspect-[4/3] group"
               onMouseEnter={() => setHoveredProject(project.id)}
               onMouseLeave={() => setHoveredProject(null)}
@@ -264,7 +267,9 @@ const WorkScreen = ({ onTabClick }: WorkScreenProps) => {
                   alt={project.title}
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  // Optimization for 1000px width images
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  priority={project.id <= 3} // Pehle 3 projects ko priority loading di hai
                 />
               </div>
 

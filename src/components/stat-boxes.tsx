@@ -38,9 +38,9 @@ const StatBox = ({ number, text }: { number: string; text: string }) => {
 
 const StatBoxes = () => {
   const stats = [
-    { number: "6", text: "MONTHS OF EXPERIENCE" },
-    { number: "10", text: "COMPLETED PROJECTS" },
-    { number: "2", text: "HAPPY CUSTOMERS" },
+    { number: "1", text: "YEAR OF EXPERIENCE" },
+    { number: "8", text: "COMPLETED PROJECTS" },
+    { number: "3", text: "HAPPY CUSTOMERS" },
     { number: "2", text: "AWARDS WON" },
   ];
 

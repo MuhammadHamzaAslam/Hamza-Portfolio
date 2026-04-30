@@ -31,7 +31,7 @@ const skills = [
   },
   {
     name: "React.js",
-    logo: "https://cdn.worldvectorlogo.com/logos/react-2.svg",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
   },
   {
     name: "Node.js",
@@ -39,7 +39,7 @@ const skills = [
   },
   {
     name: "React Native",
-    logo: "https://cdn.worldvectorlogo.com/logos/react-2.svg",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
   },
   {
     name: "Javascrpit",

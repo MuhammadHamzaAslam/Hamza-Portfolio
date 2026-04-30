@@ -114,7 +114,7 @@ const ContactScreen = ({ onTabClick }: ContactScreenProps) => {
                   MAIL ME
                 </h3>
                 <p className="text-gray-700 dark:text-gray-300">
-                  hamzaaslam19087@gmail.com
+                  mhamza.atwork@gmail.com@gmail.com
                 </p>
               </div>
             </div>

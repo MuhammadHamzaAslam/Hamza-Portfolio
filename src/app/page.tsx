@@ -12,7 +12,7 @@ import AboutScreen from "@/components/about-screen";
 import ContactScreen from "@/components/contact-screen";
 import { TiArrowRightThick } from "react-icons/ti";
 import { useTheme } from "next-themes";
-import me from "../../public/images/me.jpg";
+import me from "../../public/images/me.png";
 import WorkScreen from "@/components/work-screen";
 import BlogScreen from "@/components/blog-screen";
 
